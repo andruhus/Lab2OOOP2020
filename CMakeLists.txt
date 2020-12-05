@@ -41,11 +41,14 @@ else()
   add_executable(Lab2
     main.cpp
     mainwindow.cpp
+    settings.cpp
     alarmclock.cpp
     mainwindow.h
     alarmclock.h
+    settings.h
     alarmclock.ui
     mainwindow.ui
+    settings.ui
     ${TS_FILES}
   )
 endif()

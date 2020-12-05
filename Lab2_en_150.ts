@@ -47,4 +47,12 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="settings.ui" line="16"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

@@ -25,5 +25,5 @@ void AlarmClock::on_toolButton_clicked()
 
 void AlarmClock::on_AlarmClock_destroyed()
 {
-    parentWidget()->show();
+
 }
