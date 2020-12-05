@@ -12,3 +12,9 @@ Settings::~Settings()
 {
     delete ui;
 }
+
+void Settings::on_toolButton_2_clicked()
+{
+    parentWidget()->show();
+    this->~Settings();
+}

@@ -27,3 +27,12 @@ void AlarmClock::on_AlarmClock_destroyed()
 {
 
 }
+
+void AlarmClock::on_toolButton_3_clicked()
+{
+    hide();
+    setting = new Settings(this);
+    setting->setWindowFlags( Qt::Window );
+    setting->setAttribute( Qt::WA_DeleteOnClose );
+    setting->show();
+}

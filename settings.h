@@ -15,6 +15,9 @@ public:
     explicit Settings(QWidget *parent = nullptr);
     ~Settings();
 
+private slots:
+    void on_toolButton_2_clicked();
+
 private:
     Ui::Settings *ui;
 };

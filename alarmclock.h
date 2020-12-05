@@ -2,7 +2,7 @@
 #define ALARMCLOCK_H
 #pragma once
 #include <QWidget>
-
+#include "settings.h"
 namespace Ui {
 class AlarmClock;
 }
@@ -22,8 +22,11 @@ private slots:
 
     void on_AlarmClock_destroyed();
 
+    void on_toolButton_3_clicked();
+
 private:
     Ui::AlarmClock *ui;
+    Settings *setting;
 
 };
 

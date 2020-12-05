@@ -46,8 +46,8 @@ else()
     mainwindow.h
     alarmclock.h
     settings.h
-    alarmclock.ui
     mainwindow.ui
+    alarmclock.ui
     settings.ui
     ${TS_FILES}
   )

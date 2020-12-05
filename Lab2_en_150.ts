@@ -5,7 +5,7 @@
     <name>AlarmClock</name>
     <message>
         <location filename="alarmclock.ui" line="14"/>
-        <source>Form</source>
+        <source>Alarm clocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -28,10 +28,6 @@
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="20"/>
-        <source>MainWindow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="mainwindow.ui" line="38"/>
         <source>Timers</source>
         <translation type="unfinished"></translation>
@@ -50,8 +46,19 @@
 <context>
     <name>Settings</name>
     <message>
-        <location filename="settings.ui" line="16"/>
-        <source>Form</source>
+        <location filename="settings.ui" line="28"/>
+        <source>Timers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="settings.ui" line="44"/>
+        <source>Alarm clock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="settings.ui" line="14"/>
+        <location filename="settings.ui" line="60"/>
+        <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
