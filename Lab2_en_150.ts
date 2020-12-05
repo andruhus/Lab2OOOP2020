@@ -9,17 +9,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="38"/>
+        <location filename="alarmclock.ui" line="28"/>
         <source>Timers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="51"/>
+        <location filename="alarmclock.ui" line="44"/>
         <source>Alarm clock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="64"/>
+        <location filename="alarmclock.ui" line="57"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>

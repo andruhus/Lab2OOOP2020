@@ -32,7 +32,7 @@
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 85, 255);</string>
+         <string notr="true">background-color: rgb(99, 174, 255);</string>
         </property>
         <property name="text">
          <string>Timers</string>
