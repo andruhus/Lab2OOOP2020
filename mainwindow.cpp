@@ -17,7 +17,13 @@ MainWindow::~MainWindow()
 void MainWindow::on_toolButton_2_clicked()
 {
     hide();
-    alarm = new AlarmClock();
+    alarm = new AlarmClock(this);
+    alarm->setWindowFlags( Qt::Window );
+    alarm->setAttribute( Qt::WA_DeleteOnClose );
     alarm->show();
+
+
+
+
 
 }
