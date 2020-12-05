@@ -1,6 +1,6 @@
 #ifndef ALARMCLOCK_H
 #define ALARMCLOCK_H
-
+#pragma once
 #include <QWidget>
 
 namespace Ui {

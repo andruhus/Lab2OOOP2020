@@ -13,3 +13,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_toolButton_2_clicked()
+{
+    hide();
+    alarm = new AlarmClock();
+    alarm->show();
+
+}
