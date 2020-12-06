@@ -1,8 +1,10 @@
 #include "syshidden.h"
-
+#include <QDebug>
 SysHidden::SysHidden(QObject *parent)
     : QAbstractItemModel(parent)
 {
+    time = new QTimer(this);
+    connect(time,SIGNAL(timeout()),this,SLOT())
 }
 
 QVariant SysHidden::headerData(int section, Qt::Orientation orientation, int role) const
@@ -56,4 +58,8 @@ bool SysHidden::Get_Disturb()
 void SysHidden::Set_Disturb(bool dis)
 {
     isDisturbed = dis;
+}
+
+void SysHidden::MyFunc(){
+    qDebug() << "tut";
 }
