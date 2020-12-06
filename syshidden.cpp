@@ -4,7 +4,8 @@ SysHidden::SysHidden(QObject *parent)
     : QAbstractItemModel(parent)
 {
     time = new QTimer(this);
-    connect(time,SIGNAL(timeout()),this,SLOT())
+    connect(time,SIGNAL(timeout()),this,SLOT(MyFunc()));
+    time->start(1000);
 }
 
 QVariant SysHidden::headerData(int section, Qt::Orientation orientation, int role) const

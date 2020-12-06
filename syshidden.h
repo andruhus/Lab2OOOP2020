@@ -25,8 +25,8 @@ public:
     // My functionality
     bool Get_Disturb();
     void Set_Disturb(bool dis);
-public slot:
-     void MyFunc()
+public slots:
+     void MyFunc();
 
 private:
     bool isDisturbed = false;
