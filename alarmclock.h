@@ -3,6 +3,7 @@
 #pragma once
 #include <QWidget>
 #include "settings.h"
+#include "add_a_new_alarm_dialog.h"
 namespace Ui {
 class AlarmClock;
 }
@@ -24,10 +25,13 @@ private slots:
 
     void on_toolButton_3_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::AlarmClock *ui;
     Settings *setting;
     SysHidden *system;
+    Add_a_new_alarm_dialog *dialog;
 };
 
 #endif // ALARMCLOCK_H

@@ -36,3 +36,9 @@ void AlarmClock::on_toolButton_3_clicked()
     setting->setAttribute( Qt::WA_DeleteOnClose );
     setting->show();
 }
+
+void AlarmClock::on_pushButton_clicked()
+{
+    dialog = new Add_a_new_alarm_dialog(this);
+    dialog->show();
+}
