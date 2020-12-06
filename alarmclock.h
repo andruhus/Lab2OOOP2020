@@ -27,6 +27,20 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
+private:
+    enum Alarm_Filters{
+        all,
+        am,
+        pm
+    };
+    Alarm_Filters filt_state = all;
+    void ComboBoxConfig();
+private:
+    void UpdateList();
+    QString alarm_db_name = "C:/Users/aaade/Desktop/programs/OOP/Labus2/Lab2/alarms.txt";
+
 private:
     Ui::AlarmClock *ui;
     Settings *setting;

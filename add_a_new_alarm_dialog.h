@@ -25,7 +25,7 @@ private:
 
 private:
     Ui::Add_a_new_alarm_dialog *ui;
-    QString alarms_db_name = "alarms.txt";
+    QString alarm_db_name = "C:/Users/aaade/Desktop/programs/OOP/Labus2/Lab2/alarms.txt";
 };
 
 #endif // ADD_A_NEW_ALARM_DIALOG_H

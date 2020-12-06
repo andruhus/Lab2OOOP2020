@@ -57,7 +57,7 @@ void Add_a_new_alarm_dialog::Write_a_new_Alarm(int h, int m, int s)
     QTime value(h,m,s);
     QString value_str = value.toString();
 
-    QFile file(alarms_db_name);
+    QFile file(alarm_db_name);
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
         QMessageBox::critical(this,"File error","It is something wrong with your file");
@@ -83,6 +83,6 @@ void Add_a_new_alarm_dialog::on_pushButton_clicked()
     int s = seconds.toInt();
     Write_a_new_Alarm(h,m,s);
 
-    QMessageBox::information(this,"Successful","A new timer has been added");
+    QMessageBox::information(this,"Successful","A new timer has been added. Restart the app to see it");
     this->~Add_a_new_alarm_dialog();
 }
