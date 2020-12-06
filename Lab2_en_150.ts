@@ -76,18 +76,23 @@
 <context>
     <name>Settings</name>
     <message>
-        <location filename="settings.ui" line="28"/>
+        <location filename="settings.ui" line="30"/>
         <source>Timers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="settings.ui" line="44"/>
+        <location filename="settings.ui" line="46"/>
         <source>Alarm clock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="settings.ui" line="99"/>
+        <source>Do not Disturb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="settings.ui" line="14"/>
-        <location filename="settings.ui" line="60"/>
+        <location filename="settings.ui" line="62"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
