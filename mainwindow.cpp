@@ -127,6 +127,6 @@ void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
     int s = line_s.toInt();
     QTime *temp = new QTime(h,m,s);
     system->Add_working_timer(temp);
+    QMessageBox::information(this,"Switched on","The timer has been turned on.");
 
-    //qDebug << temp;
 }

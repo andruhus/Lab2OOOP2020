@@ -2,6 +2,7 @@
 #define ALARMCLOCK_H
 #pragma once
 #include <QWidget>
+#include <QListWidgetItem>
 #include "settings.h"
 #include "add_a_new_alarm_dialog.h"
 namespace Ui {
@@ -28,6 +29,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     enum Alarm_Filters{

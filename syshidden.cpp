@@ -1,5 +1,6 @@
 #include "syshidden.h"
 #include <QDebug>
+#include <QMessageBox>
 SysHidden::SysHidden(QObject *parent)
     : QAbstractItemModel(parent)
 {
@@ -66,8 +67,14 @@ void SysHidden::MyFunc(){
 
 }
 
+void SysHidden::Add_working_alarm(QTime *time)
+{
+    working_alarms.push_back(time);
+}
+
 void SysHidden::Add_working_timer(QTime *time)
 {
     working_timers.push_back(time);
+
 
 }
