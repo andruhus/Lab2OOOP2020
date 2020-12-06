@@ -15,6 +15,12 @@ public:
     explicit Add_a_new_alarm_dialog(QWidget *parent = nullptr);
     ~Add_a_new_alarm_dialog();
 
+private slots:
+    void on_pushButton_clicked();
+
+private:
+    bool Check_Input(QString s1,QString s2,QString s3);
+
 private:
     Ui::Add_a_new_alarm_dialog *ui;
 };
