@@ -2,7 +2,8 @@
 #define ADD_A_NEW_TIMER_DIALOG_H
 
 #include <QDialog>
-
+#include <QFile>
+#include <QTextStream>
 namespace Ui {
 class Add_a_new_timer_dialog;
 }
@@ -20,10 +21,11 @@ private slots:
 
 private:
     bool Check_Input(QString s1,QString s2,QString s3);
-
+    void Write_a_new_Timer(int h,int m,int s);
 
 private:
     Ui::Add_a_new_timer_dialog *ui;
+    QString timer_db_name = "timers.txt";
 };
 
 #endif // ADD_A_NEW_TIMER_DIALOG_H
