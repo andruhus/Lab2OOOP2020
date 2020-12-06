@@ -1,6 +1,7 @@
 #include "add_a_new_alarm_dialog.h"
 #include "ui_add_a_new_alarm_dialog.h"
 #include<QMessageBox>
+#include <QTime>
 Add_a_new_alarm_dialog::Add_a_new_alarm_dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Add_a_new_alarm_dialog)
@@ -48,7 +49,23 @@ bool Add_a_new_alarm_dialog::Check_Input(QString s1, QString s2, QString s3)
             QMessageBox::critical(this,"Error in Seconds field","Seconds should be between 0 and 59");
             return false;
         }
-    return true;
+        return true;
+}
+
+void Add_a_new_alarm_dialog::Write_a_new_Alarm(int h, int m, int s)
+{
+    QTime value(h,m,s);
+    QString value_str = value.toString();
+
+    QFile file(alarms_db_name);
+    if(!file.open(QFile::WriteOnly | QFile::Text))
+    {
+        QMessageBox::critical(this,"File error","It is something wrong with your file");
+    }
+    QTextStream out(&file);
+    out << value_str;
+    file.flush();
+    file.close();
 }
 
 
@@ -60,6 +77,11 @@ void Add_a_new_alarm_dialog::on_pushButton_clicked()
 
     if (!Check_Input(hours,minutes,seconds))
         return;
+
+    int h = hours.toInt();
+    int m = minutes.toInt();
+    int s = seconds.toInt();
+    Write_a_new_Alarm(h,m,s);
 
     QMessageBox::information(this,"Successful","A new timer has been added");
     this->~Add_a_new_alarm_dialog();

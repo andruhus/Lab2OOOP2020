@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     system = new SysHidden();
+    ComboBoxConfig();
 }
 
 MainWindow::~MainWindow()
@@ -43,4 +44,11 @@ void MainWindow::on_addNewTimer_clicked()
 {
     dialog = new Add_a_new_timer_dialog(this);
     dialog->show();
+}
+
+void MainWindow::ComboBoxConfig()
+{
+    ui->comboBox->addItem("All");
+    ui->comboBox->addItem("Sport only");
+    ui->comboBox->addItem("Cookery only");
 }

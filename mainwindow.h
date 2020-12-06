@@ -25,6 +25,14 @@ private slots:
     void on_addNewTimer_clicked();
 
 private:
+    enum Timer_Filters{
+        all,
+        sport,
+        cookery
+    };
+    Timer_Filters filt_state = all;
+    void ComboBoxConfig();
+private:
     Ui::MainWindow *ui;
     AlarmClock *alarm;
     Settings * setting;

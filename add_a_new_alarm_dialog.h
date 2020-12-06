@@ -2,7 +2,8 @@
 #define ADD_A_NEW_ALARM_DIALOG_H
 
 #include <QDialog>
-
+#include <QFile>
+#include <QTextStream>
 namespace Ui {
 class Add_a_new_alarm_dialog;
 }
@@ -20,9 +21,11 @@ private slots:
 
 private:
     bool Check_Input(QString s1,QString s2,QString s3);
+    void Write_a_new_Alarm(int h,int m,int s);
 
 private:
     Ui::Add_a_new_alarm_dialog *ui;
+    QString alarms_db_name = "alarms.txt";
 };
 
 #endif // ADD_A_NEW_ALARM_DIALOG_H
