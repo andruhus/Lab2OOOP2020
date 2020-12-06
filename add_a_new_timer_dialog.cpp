@@ -22,8 +22,8 @@ void Add_a_new_timer_dialog::on_pushButton_clicked()
     if (!Check_Input(hours,minutes,seconds))
         return;
 
-
-
+    QMessageBox::information(this,"Successful","A new timer has been added");
+    this->~Add_a_new_timer_dialog();
 }
 
 bool Add_a_new_timer_dialog::Check_Input(QString s1, QString s2, QString s3)

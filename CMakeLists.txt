@@ -45,15 +45,18 @@ else()
     alarmclock.cpp
     syshidden.cpp
     add_a_new_timer_dialog.cpp
+    add_a_new_alarm_dialog.cpp
     mainwindow.h
     alarmclock.h
     settings.h
     syshidden.h
     add_a_new_timer_dialog.h
+    add_a_new_alarm_dialog.h
     mainwindow.ui
     alarmclock.ui
     settings.ui
     add_a_new_timer_dialog.ui
+    add_a_new_alarm_dialog.ui
     ${TS_FILES}
   )
 endif()
