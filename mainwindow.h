@@ -25,5 +25,6 @@ private:
     Ui::MainWindow *ui;
     AlarmClock *alarm;
     Settings * setting;
+    SysHidden *system;
 };
 #endif // MAINWINDOW_H
