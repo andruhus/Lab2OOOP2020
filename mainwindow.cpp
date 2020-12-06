@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QDebug>
+#include<QMessageBox>
+#include<QTime>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -8,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     system = new SysHidden();
     ComboBoxConfig();
+    UpdateList();
 }
 
 MainWindow::~MainWindow()
@@ -53,6 +56,53 @@ void MainWindow::ComboBoxConfig()
     ui->comboBox->addItem("Cookery only");
 }
 
+void MainWindow::UpdateList()
+{
+    ui->listWidget->clear();
+    QTime devider(0,10,0);
+    QFile file(timer_db_name);
+    if(!file.open(QFile::ReadOnly | QFile::Text))
+        QMessageBox::critical(this,"File error","It is something wrong with your file");
+
+    QTextStream in(&file);
+
+    if(filt_state == all)
+    {
+        while(!in.atEnd())
+        {
+            QString temp = in.readLine();
+            QTime item = QTime::fromString(temp);
+            QString to_write = item.toString("hh : mm : ss");
+            ui->listWidget->addItem(to_write);
+        }
+    }
+    if(filt_state == sport)
+    {
+        while(!in.atEnd())
+        {
+            QString temp = in.readLine();
+            QTime item = QTime::fromString(temp);
+            if(item >= devider)
+                continue;
+            QString to_write = item.toString("hh : mm : ss");
+            ui->listWidget->addItem(to_write);
+        }
+    }
+    if(filt_state == cookery)
+    {
+        while(!in.atEnd())
+        {
+            QString temp = in.readLine();
+            QTime item = QTime::fromString(temp);
+            if(item < devider)
+                continue;
+            QString to_write = item.toString("hh : mm : ss");
+            ui->listWidget->addItem(to_write);
+        }
+    }
+    file.close();
+}
+
 void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
 {
     if(arg1 == "All")
@@ -61,4 +111,5 @@ void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
         filt_state = sport;
     if(arg1 == "Cookery only")
         filt_state = cookery;
+    UpdateList();
 }

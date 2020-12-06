@@ -35,6 +35,9 @@ private:
     Timer_Filters filt_state = all;
     void ComboBoxConfig();
 private:
+    void UpdateList();
+    QString timer_db_name = "C:/Users/aaade/Desktop/programs/OOP/Labus2/Lab2/timers.txt";
+private:
     Ui::MainWindow *ui;
     AlarmClock *alarm;
     Settings * setting;

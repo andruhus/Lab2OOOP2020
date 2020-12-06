@@ -25,7 +25,7 @@ private:
 
 private:
     Ui::Add_a_new_timer_dialog *ui;
-    QString timer_db_name = "timers.txt";
+    QString timer_db_name = "C:/Users/aaade/Desktop/programs/OOP/Labus2/Lab2/timers.txt";
 };
 
 #endif // ADD_A_NEW_TIMER_DIALOG_H

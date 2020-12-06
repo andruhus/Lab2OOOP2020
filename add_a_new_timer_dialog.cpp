@@ -80,7 +80,7 @@ void Add_a_new_timer_dialog::Write_a_new_Timer(int h, int m, int s)
         QMessageBox::critical(this,"File error","It is something wrong with your file");
     }
     QTextStream out(&file);
-    out << value_str;
+    out << value_str + '\n';
     file.flush();
     file.close();
 }
