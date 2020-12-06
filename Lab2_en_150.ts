@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="Lab2_en_150">
 <context>
+    <name>Add_a_new_timer_dialog</name>
+    <message>
+        <location filename="add_a_new_timer_dialog.ui" line="13"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>AlarmClock</name>
     <message>
         <location filename="alarmclock.ui" line="14"/>

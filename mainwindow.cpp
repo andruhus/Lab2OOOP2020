@@ -38,3 +38,9 @@ void MainWindow::on_toolButton_3_clicked()
     setting->setAttribute( Qt::WA_DeleteOnClose );
     setting->show();
 }
+
+void MainWindow::on_addNewTimer_clicked()
+{
+    dialog = new Add_a_new_timer_dialog(this);
+    dialog->show();
+}
