@@ -12,7 +12,7 @@ class AlarmClock : public QWidget
     Q_OBJECT
 
 public:
-    explicit AlarmClock(QWidget *parent = nullptr);
+    explicit AlarmClock(QWidget *parent = nullptr,SysHidden *sys = nullptr);
     ~AlarmClock();
 
 private slots:
@@ -27,7 +27,7 @@ private slots:
 private:
     Ui::AlarmClock *ui;
     Settings *setting;
-
+    SysHidden *system;
 };
 
 #endif // ALARMCLOCK_H

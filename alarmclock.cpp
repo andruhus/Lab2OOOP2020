@@ -1,12 +1,12 @@
 #include "alarmclock.h"
 #include "ui_alarmclock.h"
 
-AlarmClock::AlarmClock(QWidget *parent) :
+AlarmClock::AlarmClock(QWidget *parent,SysHidden *sys) :
     QWidget(parent),
     ui(new Ui::AlarmClock)
 {
     ui->setupUi(this);
-
+    system = sys;
 }
 
 AlarmClock::~AlarmClock()
