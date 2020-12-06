@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #pragma once
 #include <QMainWindow>
+#include <QListWidgetItem>
 #include "alarmclock.h"
 #include "add_a_new_timer_dialog.h"
 QT_BEGIN_NAMESPACE
@@ -25,6 +26,8 @@ private slots:
     void on_addNewTimer_clicked();
 
     void on_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     enum Timer_Filters{

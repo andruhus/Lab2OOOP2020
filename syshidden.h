@@ -2,7 +2,7 @@
 #define SYSHIDDEN_H
 #include <QTimer>
 #include <QAbstractItemModel>
-
+#include <vector>
 class SysHidden : public QAbstractItemModel
 {
     Q_OBJECT
@@ -27,11 +27,14 @@ public:
     void Set_Disturb(bool dis);
 public slots:
      void MyFunc();
-
+public:
+     void Add_working_alarm(QTime* time);
+     void Add_working_timer(QTime* time);
 private:
     bool isDisturbed = false;
     QTimer* time;
-
+    std::vector<QTime*> working_alarms;
+    std::vector<QTime*> working_timers;
 };
 
 #endif // SYSHIDDEN_H

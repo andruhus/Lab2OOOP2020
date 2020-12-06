@@ -113,3 +113,20 @@ void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
         filt_state = cookery;
     UpdateList();
 }
+
+
+
+void MainWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    QString line = item->text();
+    QString line_h = line.left(2);
+    QString line_m = line.mid(5,2);
+    QString line_s = line.right(2);
+    int h = line_h.toInt();
+    int m = line_m.toInt();
+    int s = line_s.toInt();
+    QTime *temp = new QTime(h,m,s);
+    system->Add_working_timer(temp);
+
+    //qDebug << temp;
+}

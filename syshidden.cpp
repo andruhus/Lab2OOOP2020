@@ -65,3 +65,9 @@ void SysHidden::MyFunc(){
     //qDebug() << "tut";
 
 }
+
+void SysHidden::Add_working_timer(QTime *time)
+{
+    working_timers.push_back(time);
+
+}
