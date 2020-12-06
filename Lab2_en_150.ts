@@ -9,18 +9,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="28"/>
+        <location filename="alarmclock.ui" line="30"/>
         <source>Timers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="44"/>
+        <location filename="alarmclock.ui" line="46"/>
         <source>Alarm clock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="alarmclock.ui" line="57"/>
+        <location filename="alarmclock.ui" line="59"/>
         <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarmclock.ui" line="82"/>
+        <source>+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarmclock.ui" line="104"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Chosen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
