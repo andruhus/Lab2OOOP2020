@@ -24,6 +24,8 @@ private slots:
 
     void on_addNewTimer_clicked();
 
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
 private:
     enum Timer_Filters{
         all,

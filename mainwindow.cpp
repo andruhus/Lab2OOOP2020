@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -51,4 +51,14 @@ void MainWindow::ComboBoxConfig()
     ui->comboBox->addItem("All");
     ui->comboBox->addItem("Sport only");
     ui->comboBox->addItem("Cookery only");
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
+{
+    if(arg1 == "All")
+        filt_state = all;
+    if(arg1 == "Sport only")
+        filt_state = sport;
+    if(arg1 == "Cookery only")
+        filt_state = cookery;
 }
