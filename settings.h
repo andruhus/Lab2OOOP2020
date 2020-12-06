@@ -12,14 +12,17 @@ class Settings : public QWidget
     Q_OBJECT
 
 public:
-    explicit Settings(QWidget *parent = nullptr);
+    explicit Settings(QWidget *parent = nullptr,QWidget* another_parent = nullptr);
     ~Settings();
 
 private slots:
     void on_toolButton_2_clicked();
 
+    void on_toolButton_clicked();
+
 private:
     Ui::Settings *ui;
+    QWidget *parent2 = nullptr;
 };
 
 #endif // SETTINGS_H

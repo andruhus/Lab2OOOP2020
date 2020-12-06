@@ -15,11 +15,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private slots:
     void on_toolButton_2_clicked();
+
+    void on_toolButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;
     AlarmClock *alarm;
+    Settings * setting;
 };
 #endif // MAINWINDOW_H
