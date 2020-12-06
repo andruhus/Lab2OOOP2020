@@ -23,7 +23,12 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
+    bool Get_Disturb();
+    void Set_Disturb(bool dis);
+
 private:
+    bool isDisturbed = false;
+
 };
 
 #endif // SYSHIDDEN_H

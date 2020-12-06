@@ -2,7 +2,7 @@
 #define SETTINGS_H
 
 #include <QWidget>
-
+#include "syshidden.h"
 namespace Ui {
 class Settings;
 }
@@ -12,7 +12,7 @@ class Settings : public QWidget
     Q_OBJECT
 
 public:
-    explicit Settings(QWidget *parent = nullptr,QWidget* another_parent = nullptr);
+    explicit Settings(QWidget *parent = nullptr,QWidget* another_parent = nullptr,SysHidden *system = nullptr);
     ~Settings();
 
 private slots:
@@ -20,9 +20,12 @@ private slots:
 
     void on_toolButton_clicked();
 
+    void on_checkBox_stateChanged(int arg1);
+
 private:
     Ui::Settings *ui;
     QWidget *parent2 = nullptr;
+    SysHidden *system;
 };
 
 #endif // SETTINGS_H

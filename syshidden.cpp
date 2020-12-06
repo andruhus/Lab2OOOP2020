@@ -14,13 +14,13 @@ QVariant SysHidden::headerData(int section, Qt::Orientation orientation, int rol
 QModelIndex SysHidden::index(int row, int column, const QModelIndex &parent) const
 {
     // FIXME: Implement me!
-    return NULL;
+    return parent;
 }
 
 QModelIndex SysHidden::parent(const QModelIndex &index) const
 {
     // FIXME: Implement me!
-    return NULL;
+    return index;
 }
 
 int SysHidden::rowCount(const QModelIndex &parent) const
@@ -46,4 +46,14 @@ QVariant SysHidden::data(const QModelIndex &index, int role) const
 
     // FIXME: Implement me!
     return QVariant();
+}
+
+bool SysHidden::Get_Disturb()
+{
+    return isDisturbed;
+}
+
+void SysHidden::Set_Disturb(bool dis)
+{
+    isDisturbed = dis;
 }
