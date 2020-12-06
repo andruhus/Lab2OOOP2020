@@ -4,8 +4,28 @@
 <context>
     <name>Add_a_new_timer_dialog</name>
     <message>
-        <location filename="add_a_new_timer_dialog.ui" line="13"/>
-        <source>Dialog</source>
+        <location filename="add_a_new_timer_dialog.ui" line="14"/>
+        <source>Enter a new timer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="add_a_new_timer_dialog.ui" line="24"/>
+        <source>Hours</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="add_a_new_timer_dialog.ui" line="38"/>
+        <source>Minutes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="add_a_new_timer_dialog.ui" line="52"/>
+        <source>Seconds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="add_a_new_timer_dialog.ui" line="64"/>
+        <source>Confirm</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
