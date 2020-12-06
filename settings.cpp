@@ -26,8 +26,8 @@ void Settings::on_toolButton_2_clicked()
 
 void Settings::on_toolButton_clicked()
 {
-    if(parent())
-        parentWidget()->show();
+    if(!parent2)
+        parentWidget()->parentWidget()->show();
     else
     {
         parent2->parentWidget()->show();

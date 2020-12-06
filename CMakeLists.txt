@@ -43,9 +43,11 @@ else()
     mainwindow.cpp
     settings.cpp
     alarmclock.cpp
+    syshidden.cpp
     mainwindow.h
     alarmclock.h
     settings.h
+    syshidden.h
     mainwindow.ui
     alarmclock.ui
     settings.ui
