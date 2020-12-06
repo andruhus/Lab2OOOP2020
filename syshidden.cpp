@@ -62,5 +62,6 @@ void SysHidden::Set_Disturb(bool dis)
 }
 
 void SysHidden::MyFunc(){
-    qDebug() << "tut";
+    //qDebug() << "tut";
+
 }
