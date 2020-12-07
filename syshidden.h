@@ -26,10 +26,16 @@ public:
     bool Get_Disturb();
     void Set_Disturb(bool dis);
 public slots:
-     void MyFunc();
+     void UpdateSystem();
 public:
      void Add_working_alarm(QTime* time);
      void Add_working_timer(QTime* time);
+private:
+     void UpdateAlarms();
+     void UpdateTimers();
+private:
+     void ReportAlarm();
+     void ReportTimer();
 private:
     bool isDisturbed = false;
     QTimer* time;

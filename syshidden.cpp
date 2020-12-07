@@ -1,11 +1,12 @@
 #include "syshidden.h"
 #include <QDebug>
 #include <QMessageBox>
+#include <QDateTime>
 SysHidden::SysHidden(QObject *parent)
     : QAbstractItemModel(parent)
 {
     time = new QTimer(this);
-    connect(time,SIGNAL(timeout()),this,SLOT(MyFunc()));
+    connect(time,SIGNAL(timeout()),this,SLOT(UpdateSystem()));
     time->start(1000);
 }
 
@@ -62,9 +63,10 @@ void SysHidden::Set_Disturb(bool dis)
     isDisturbed = dis;
 }
 
-void SysHidden::MyFunc(){
-    //qDebug() << "tut";
+void SysHidden::UpdateSystem(){
 
+    UpdateAlarms();
+    UpdateTimers();
 }
 
 void SysHidden::Add_working_alarm(QTime *time)
@@ -76,5 +78,37 @@ void SysHidden::Add_working_timer(QTime *time)
 {
     working_timers.push_back(time);
 
+
+}
+
+void SysHidden::UpdateAlarms()
+{
+    QTime now = QTime::currentTime();
+    for(QTime* x : working_alarms)
+        if(*x == now)
+        {
+            ReportAlarm();
+        }
+}
+
+void SysHidden::UpdateTimers()
+{
+    QTime end(0,0,0);
+    for(QTime* x : working_timers)
+    {
+        x->addSecs(-1);
+        if(*x == end){
+            ReportTimer();
+        }
+    }
+}
+
+void SysHidden::ReportAlarm()
+{
+
+}
+
+void SysHidden::ReportTimer()
+{
 
 }
