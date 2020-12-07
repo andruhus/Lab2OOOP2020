@@ -75,7 +75,7 @@ void Add_a_new_timer_dialog::Write_a_new_Timer(int h, int m, int s)
     QString value_str = value.toString();
 
     QFile file(timer_db_name);
-    if(!file.open(QFile::WriteOnly | QFile::Text))
+    if(!file.open(QFile::Append | QFile::Text))
     {
         QMessageBox::critical(this,"File error","It is something wrong with your file");
     }

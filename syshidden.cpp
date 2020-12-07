@@ -65,6 +65,7 @@ void SysHidden::Set_Disturb(bool dis)
 
 void SysHidden::UpdateSystem(){
 
+
     UpdateAlarms();
     UpdateTimers();
 }
@@ -85,9 +86,10 @@ void SysHidden::UpdateAlarms()
 {
     QTime now = QTime::currentTime();
     for(int x = 0;x<working_alarms.size();x++)
-        if(*working_alarms[x] == now)
+        if(*working_alarms[x] <= now.addSecs(1) && *working_alarms[x] >= now.addSecs(-1))
         {
             ReportAlarm();
+            delete working_alarms[x];
             working_alarms.erase(working_alarms.begin()+x);
             x--;
         }
@@ -98,9 +100,13 @@ void SysHidden::UpdateTimers()
     QTime end(0,0,0);
     for(int x = 0;x<working_timers.size();x++)
     {
-        working_timers[x]->addSecs(-1);
+        QTime* temp = new QTime();
+        *temp = working_timers[x]->addSecs(-1);
+        delete working_timers[x];
+        working_timers[x] = temp;
         if(*working_timers[x] == end){
             ReportTimer();
+            delete working_timers[x];
             working_timers.erase(working_timers.begin()+x);
             x--;
         }
@@ -109,13 +115,16 @@ void SysHidden::UpdateTimers()
 
 void SysHidden::ReportAlarm()
 {
-
+    if(isDisturbed)
+        return;
     win1 = new Alarm_end_window();
     win1->show();
 }
 
 void SysHidden::ReportTimer()
 {
+    if(isDisturbed)
+        return;
     win2 = new Timer_end_window();
     win2->show();
 }

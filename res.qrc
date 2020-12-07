@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>military-trumpet.mp3</file>
+        <file>rooster.mp3</file>
+    </qresource>
+</RCC>

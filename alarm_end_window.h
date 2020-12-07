@@ -1,6 +1,7 @@
 #ifndef ALARM_END_WINDOW_H
 #define ALARM_END_WINDOW_H
-
+#pragma once
+#include <QtMultimedia/QSound>
 #include <QDialog>
 
 namespace Ui {
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::Alarm_end_window *ui;
+
 };
 
 #endif // ALARM_END_WINDOW_H

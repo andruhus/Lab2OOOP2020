@@ -1,6 +1,6 @@
 #ifndef ADD_A_NEW_ALARM_DIALOG_H
 #define ADD_A_NEW_ALARM_DIALOG_H
-
+#pragma once
 #include <QDialog>
 #include <QFile>
 #include <QTextStream>

@@ -10,6 +10,11 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(CMAKE_PREFIX_PATH C:/Qt/5.15.1/msvc2019_64/lib/cmake/Qt5Multimedia)
+# \lib\cmake\Qt5Multimedia
+
+
+
 
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check http://doc.qt.io/qt-5/deployment-android.html for more information.
@@ -26,8 +31,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets LinguistTools REQUIRED)
+find_package(Qt5Multimedia CONFIG)
 
 set(TS_FILES Lab2_en_150.ts)
+
+
 
 if(ANDROID)
   add_library(Lab2 SHARED
@@ -63,10 +71,11 @@ else()
     add_a_new_alarm_dialog.ui
     timer_end_window.ui
     alarm_end_window.ui
+    res.qrc
     ${TS_FILES}
   )
 endif()
 
 target_link_libraries(Lab2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
+target_link_libraries(Lab2 PRIVATE Qt${QT_VERSION_MAJOR}::Multimedia)
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

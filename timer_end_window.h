@@ -1,6 +1,7 @@
 #ifndef TIMER_END_WINDOW_H
 #define TIMER_END_WINDOW_H
-
+#pragma once
+#include <QtMultimedia/QSound>
 #include <QDialog>
 
 namespace Ui {
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::Timer_end_window *ui;
+
 };
 
 #endif // TIMER_END_WINDOW_H

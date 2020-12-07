@@ -58,7 +58,7 @@ void Add_a_new_alarm_dialog::Write_a_new_Alarm(int h, int m, int s)
     QString value_str = value.toString();
 
     QFile file(alarm_db_name);
-    if(!file.open(QFile::WriteOnly | QFile::Text))
+    if(!file.open(QFile::Append | QFile::Text))
     {
         QMessageBox::critical(this,"File error","It is something wrong with your file");
     }
