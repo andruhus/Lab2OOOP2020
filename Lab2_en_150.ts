@@ -91,6 +91,14 @@
     </message>
 </context>
 <context>
+    <name>Alarm_end_window</name>
+    <message>
+        <location filename="alarm_end_window.ui" line="13"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="20"/>
@@ -150,6 +158,14 @@
         <location filename="settings.ui" line="14"/>
         <location filename="settings.ui" line="62"/>
         <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Timer_end_window</name>
+    <message>
+        <location filename="timer_end_window.ui" line="13"/>
+        <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
