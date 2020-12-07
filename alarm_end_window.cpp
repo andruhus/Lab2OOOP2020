@@ -12,3 +12,8 @@ Alarm_end_window::~Alarm_end_window()
 {
     delete ui;
 }
+
+void Alarm_end_window::on_pushButton_clicked()
+{
+    this->~Alarm_end_window();
+}

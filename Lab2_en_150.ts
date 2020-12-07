@@ -93,8 +93,18 @@
 <context>
     <name>Alarm_end_window</name>
     <message>
-        <location filename="alarm_end_window.ui" line="13"/>
-        <source>Dialog</source>
+        <location filename="alarm_end_window.ui" line="14"/>
+        <source>Alarm is ringing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarm_end_window.ui" line="33"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; color:#ff2701;&quot;&gt;Alarm is ringing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="alarm_end_window.ui" line="77"/>
+        <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -164,8 +174,18 @@
 <context>
     <name>Timer_end_window</name>
     <message>
-        <location filename="timer_end_window.ui" line="13"/>
+        <location filename="timer_end_window.ui" line="14"/>
         <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="timer_end_window.ui" line="29"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt; color:#7c2119;&quot;&gt;Timer is off&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="timer_end_window.ui" line="58"/>
+        <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

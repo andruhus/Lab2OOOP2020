@@ -15,6 +15,9 @@ public:
     explicit Alarm_end_window(QWidget *parent = nullptr);
     ~Alarm_end_window();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Alarm_end_window *ui;
 };

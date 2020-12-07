@@ -15,6 +15,9 @@ public:
     explicit Timer_end_window(QWidget *parent = nullptr);
     ~Timer_end_window();
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Timer_end_window *ui;
 };
