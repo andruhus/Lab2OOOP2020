@@ -3,6 +3,8 @@
 #include <QTimer>
 #include <QAbstractItemModel>
 #include <vector>
+#include "alarm_end_window.h"
+#include "timer_end_window.h"
 class SysHidden : public QAbstractItemModel
 {
     Q_OBJECT
@@ -41,6 +43,9 @@ private:
     QTimer* time;
     std::vector<QTime*> working_alarms;
     std::vector<QTime*> working_timers;
+private:
+    Alarm_end_window* win1;
+    Timer_end_window* win2;
 };
 
 #endif // SYSHIDDEN_H

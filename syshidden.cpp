@@ -84,21 +84,25 @@ void SysHidden::Add_working_timer(QTime *time)
 void SysHidden::UpdateAlarms()
 {
     QTime now = QTime::currentTime();
-    for(QTime* x : working_alarms)
-        if(*x == now)
+    for(int x = 0;x<working_alarms.size();x++)
+        if(*working_alarms[x] == now)
         {
             ReportAlarm();
+            working_alarms.erase(working_alarms.begin()+x);
+            x--;
         }
 }
 
 void SysHidden::UpdateTimers()
 {
     QTime end(0,0,0);
-    for(QTime* x : working_timers)
+    for(int x = 0;x<working_timers.size();x++)
     {
-        x->addSecs(-1);
-        if(*x == end){
+        working_timers[x]->addSecs(-1);
+        if(*working_timers[x] == end){
             ReportTimer();
+            working_timers.erase(working_timers.begin()+x);
+            x--;
         }
     }
 }
@@ -106,9 +110,12 @@ void SysHidden::UpdateTimers()
 void SysHidden::ReportAlarm()
 {
 
+    win1 = new Alarm_end_window();
+    win1->show();
 }
 
 void SysHidden::ReportTimer()
 {
-
+    win2 = new Timer_end_window();
+    win2->show();
 }
